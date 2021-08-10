@@ -9,6 +9,7 @@ package tz.co.pesapal.interview.utils;
 public class EmailUtil {
 
     // Created the utility to send emails 
+    System.out.println("I made the merge conflict here!!!!");
 
     
 }
