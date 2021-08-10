@@ -1,0 +1,59 @@
+2021-08-09 16:21:00.091  INFO 5899 --- [main] t.c.p.interview.InterviewApplication     : Starting InterviewApplication using Java 11.0.11 on unknown with PID 5899 (/home/frances/HOME/DEV/interview/target/classes started by frances in /home/frances/HOME/DEV/interview)
+2021-08-09 16:21:00.097  INFO 5899 --- [main] t.c.p.interview.InterviewApplication     : No active profile set, falling back to default profiles: default
+2021-08-09 16:21:00.220  WARN 5899 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2021-08-09 16:21:00.665  INFO 5899 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-08-09 16:21:00.702  INFO 5899 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 MongoDB repository interfaces.
+2021-08-09 16:21:01.157  INFO 5899 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-08-09 16:21:01.164  INFO 5899 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-08-09 16:21:01.165  INFO 5899 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-08-09 16:21:01.220  INFO 5899 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-08-09 16:21:01.220  INFO 5899 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1078 ms
+2021-08-09 16:21:01.332  INFO 5899 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[172.17.0.3:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-08-09 16:21:02.783  INFO 5899 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3b65084e, org.springframework.security.web.context.SecurityContextPersistenceFilter@df7d1d4, org.springframework.security.web.header.HeaderWriterFilter@740c4868, org.springframework.web.filter.CorsFilter@32d0d7eb, org.springframework.security.web.authentication.logout.LogoutFilter@1f9a7684, tz.co.pesapal.interview.security.JwtTokenFilter@73c48264, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fa91d5b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ff1f465, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@cae2a97, org.springframework.security.web.session.SessionManagementFilter@6248cfab, org.springframework.security.web.access.ExceptionTranslationFilter@5ca22e19, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48e74764]
+2021-08-09 16:21:02.881  WARN 5899 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2021-08-09 16:21:02.890  INFO 5899 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-08-09 16:21:02.895  WARN 5899 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='61112bbd8baedc5b547c8755', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:188)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:144)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-08-09 16:21:02.896  WARN 5899 --- [main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='61112bbd8baedc5b547c8755', description='null'}-172.17.0.3:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.11/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.11/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.11/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+ java.base@11.0.11/java.net.Socket.connect(Socket.java:609)
+ app//com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+ app//com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+ app//com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+ app//com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:143)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.initialize(DefaultServerMonitor.java:421)
+ app//com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:399)
+ java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+2021-08-09 16:21:02.904  INFO 5899 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-08-09 16:21:02.916 ERROR 5899 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
