@@ -1,0 +1,31 @@
+version: "3.4"
+
+services:
+  api-database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - /data/db:/data/db
+      - ./dump:/data/backup
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+    restart: always
+    #command: mongorestore /data/backup
+    # networks:
+    #   - shared-network
+
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "9090:8080"
+        # volumes:
+      # - .:/usr/app/
+    restart: always
+    depends_on:
+      - api-database
+    # networks:
+    #   - shared-network

@@ -71,6 +71,7 @@ public class AppConfiguration extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/donate").permitAll()
             .antMatchers("/privacy").permitAll()
+                .antMatchers("/users/register").permitAll()
             .anyRequest().authenticated()
             .and().sessionManagement()
             .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
