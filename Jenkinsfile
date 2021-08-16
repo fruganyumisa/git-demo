@@ -29,7 +29,7 @@ pipeline {
     stage('Deploy staging') {
       steps {
         echo 'Deploy staging'
-        sh 'docker-compose up -d '
+        sh 'sh deploy_staging.sh'
       }
     }
 
