@@ -29,7 +29,7 @@ pipeline {
     stage('Deploy staging') {
       steps {
         echo 'Deploy staging'
-        sh 'java -jar target/interview-0.0.1-SNAPSHOT.jar'
+        sh 'docker-compose up -d '
       }
     }
 
